@@ -48,15 +48,23 @@ void descendingSort( int data[], int n)
 
 void sort(int data[], int n) {
   char choice;
-  cout << "Pilih urutan (1 untuk Ascending, 2 untuk Descending): ";
-  cin >> choice;
-  if (choice == '1') {
-    ascendingSort(data, n);
-  } else if (choice == '2') {
-    descendingSort(data, n);
-  } else {
-    cout << "Pilihan tidak valid." << endl;
-  }
+  cout << "Pilih urutan (1 untuk Ascending, 2 untuk Descending): " << endl;
+  choice = getch();
+  switch (choice)
+    {
+    case '1':
+      ascendingSort(data, n);
+      break;
+    case '2':
+      descendingSort(data, n);
+      break;
+    default:
+      system("cls");
+      cout << "Pilihan Tidak Tersedia" << endl;
+      getch();
+      break;
+    }
+
 }
 
 void copy() {
