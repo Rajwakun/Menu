@@ -92,28 +92,49 @@ void ms()
 void md()
 {
   system("cls");
-  cout << "Data yang dimasukkan adalah: ";
-  for (int i = 0; i < n; i++) {
-    cout << t[i] << " ";
-}
-  cout << endl;
-  cout << "Tekan sembarang tombol untuk kembali ke menu utama." << endl;
+
+    if (n == 0)
+  {
+    cout << "Data belum dimasukkan." << endl;
+    getch();
+    return;
+  } else {
+    cout << "Data yang dimasukkan adalah: ";
+    for (int i = 0; i < n; i++)
+    {
+      cout << t[i] << " ";
+    }
+    cout << endl;
+    cout << "Tekan sembarang tombol untuk kembali ke menu utama." << endl;
+  }
   getch();
 }
 
 void mt()
 {
   system("cls");
-  sort(data, n);
-  cout << "Data yang telah diurutkan adalah: ";
-  for (int i = 0; i < n; i++) {
-    cout << data[i] << " ";
+  if (n == 0)
+  {
+    cout << "Data belum dimasukkan." << endl;
+    getch();
+    return;
   }
+  else
+  {
+    sort(data, n);
+    cout << "Data yang telah diurutkan adalah: ";
+    for (int i = 0; i < n; i++)
+    {
+      cout << data[i] << " ";
+    }
 
-  cout << endl;
-  cout << "Tekan sembarang tombol untuk kembali ke menu utama." << endl;
+    cout << endl;
+    cout << "Tekan sembarang tombol untuk kembali ke menu utama." << endl;
+  }
   getch();
 }
+
+
 
 void me()
 {
